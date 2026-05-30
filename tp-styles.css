@@ -1,0 +1,258 @@
+/* ─── Design tokens — mirrors Webflow variable system ────────────────── */
+    :root {
+      /* Font families (Webflow: Font Family) */
+      --font-heading: 'IvyPresto Headline', 'Newsreader', Georgia, serif;
+      --font-body:    'Peridot PE', 'DM Sans', system-ui, sans-serif;
+
+      /* Type scale — heading sizes, fluid via clamp(min, preferred, max) */
+      --h1-font-size: clamp(2.5rem, 1.667rem + 4.167vw, 5rem);
+      --h2-font-size: clamp(2rem, 1.25rem + 3.125vw, 4rem);
+      --h3-font-size: clamp(1.75rem, 1.125rem + 2.604vw, 3rem);
+      --h4-font-size: clamp(1.25rem, 1rem + 1.042vw, 1.5rem);
+      --h5-font-size: clamp(1.1rem, 0.975rem + 0.521vw, 1.25rem);
+      --h6-font-size: clamp(0.75rem, 0.688rem + 0.26vw, 0.875rem);
+      --body-font-size: clamp(1rem, 0.9rem + 0.417vw, 1.2rem);
+
+      /* Font size scale (Webflow: Font Size variables) */
+      --fs-tiny:    0.75rem;
+      --fs-small:   0.875rem;
+      --fs-regular: 1rem;
+      --fs-medium:  1.25rem;
+      --fs-large:   1.5rem;
+      --fs-xlarge:  2.5rem;
+
+      /* Line heights (Webflow: Font Height) */
+      --lh-small:  1;     /* small */
+      --lh-medium: 1.1;   /* medium */
+      --lh-large:  1.4;   /* large */
+      --lh-xlarge: 1.6;   /* xlarge */
+
+      /* Letter spacing (Webflow: Letter Spacing) */
+      --ls-tighter: -0.5px;
+      --ls-tight:   -0.25px;
+      --ls-default: 0px;
+      --ls-wide:    0.25px;
+      --ls-wider:   0.5px;
+
+      /* Font weights (Webflow: Font Weight) */
+      --fw-light:    300;
+      --fw-normal:   400;
+      --fw-medium:   500;
+      --fw-semibold: 600;
+      --fw-bold:     700;
+      --fw-xbold:    800;
+
+      /* Spacing (Webflow: Spacing) */
+      --space-tiny:    0.125rem;
+      --space-xxsmall: 0.25rem;
+      --space-xsmall:  0.5rem;
+      --space-small:   1rem;
+      --space-medium:  2rem;
+      --space-large:   3rem;
+      --space-xlarge:  4rem;
+      --space-xxlarge: 5rem;
+      --space-huge:    6rem;
+      --space-xhuge:   8rem;
+      --space-xxhuge:  12rem;
+      --space-global-padding:    2rem;
+      --space-hero-top-padding:  14rem;
+
+      /* Section padding (Webflow: Section Padding) */
+      --section-sm: 2rem;
+      --section-md: 5rem;
+      --section-lg: 8rem;
+
+      /* Gaps (Webflow: Gaps) */
+      --gap-xxsmall: 0.25rem;
+      --gap-xsmall:  0.5rem;
+      --gap-small:   1rem;
+      --gap-regular: 1.5rem;
+      --gap-medium:  2rem;
+      --gap-large:   3rem;
+      --gap-xlarge:  4rem;
+
+      /* Border radius (Webflow: Border Radius) */
+      --radius-sm:   0.25rem;
+      --radius-md:   0.5rem;
+      --radius-lg:   1rem;
+      --radius-xl:   1.5rem;
+      --radius-full: 100vh;
+
+      /* Border width (Webflow: Border Width) */
+      --border-thin:   1px;
+      --border-normal: 0.125rem;
+      --border-bold:   0.25rem;
+
+      /* Container widths (Webflow: Container) */
+      --container-sm: 48rem;
+      --container-md: 68rem;
+      --container-lg: 86rem;
+
+      /* Colors — brand (Webflow: Brand) */
+      --c-yellow:       #e6ff32;
+      --c-yellow-light: #f5fcd2;
+      --c-cool-beige:   #F6F2EE;
+      --c-dark-navy:    #182a44;
+      --c-dark-olive:   #1e2605;
+      --c-charcoal:     #4a4a4a;
+      --c-blue-dark:    #1c4774;
+      --c-red-dark:     #7f2e23;
+
+      /* Colors — neutral (Webflow: Neutral) */
+      --c-black:      black;
+      --c-white:      white;
+      --c-n-lightest: #eee;
+      --c-n-lighter:  #ccc;
+      --c-n-light:    #aaa;
+      --c-neutral:    #666;
+      --c-n-dark:     #444;
+      --c-n-darker:   #222;
+      --c-n-darkest:  #111;
+
+      /* Colors — theme tokens (Webflow: Theme / Apps) */
+      --c-bg:         white;
+      --c-fg:         black;
+      --c-primary:    #e6ff32;        /* Primary */
+      --c-primary-fg: #2e3c05;        /* Primary Foreground */
+      --c-muted:      #f8fafc;        /* Muted */
+      --c-muted-fg:   #64748b;        /* Muted Foreground */
+      --c-border:     black;          /* Border */
+      --c-bg-dark:    #0a0a0a;        /* Background Dark */
+      --c-fg-dark:    #f8fafc;        /* Foreground Dark */
+      --c-border-dark: rgba(255, 255, 255, 0.15); /* Border Dark */
+
+      /* Colors — text hierarchy */
+      --c-ink:        #1a1c1c;        /* Primary text / headings */
+      --c-ink-subtle: #5f5e5e;        /* Secondary / muted text */
+      --c-ink-faint:  #9ca3af;        /* Tertiary / hint text */
+      --c-gray-mid:   #6b7280;        /* Table labels, footnotes */
+      --c-border-ui:  #e5e7eb;        /* Light card borders */
+
+      /* Colors — surface accents */
+      --c-marquee-bg:  #F8FFC6;       /* Marquee ticker background */
+      --c-olive:       #464833;       /* Marquee ticker text */
+      --c-card-border: rgba(199,201,173,0.3); /* Payout card border */
+    }
+
+    /* ─── Base element styles ─────────────────────────────────────────────── */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; padding: 0;
+      font-family: var(--font-body);
+      font-size: var(--body-font-size);
+      line-height: var(--lh-xlarge);
+      background: #ffffff;
+    }
+    /* Heading defaults — Webflow h1–h6 variables */
+    h1 { font-family: var(--font-heading); font-size: var(--h1-font-size); line-height: var(--lh-small);  font-weight: var(--fw-normal); }
+    h2 { font-family: var(--font-heading); font-size: var(--h2-font-size); line-height: var(--lh-medium); font-weight: var(--fw-normal); }
+    h3 { font-family: var(--font-heading); font-size: var(--h3-font-size); line-height: var(--lh-medium); font-weight: var(--fw-normal); }
+    h4 { font-family: var(--font-body);    font-size: var(--h4-font-size); line-height: var(--lh-large);  font-weight: var(--fw-bold); }
+    h5 { font-family: var(--font-body);    font-size: var(--h5-font-size); line-height: var(--lh-xlarge); font-weight: var(--fw-bold); }
+    h6 { font-family: var(--font-body);    font-size: var(--h6-font-size); line-height: var(--lh-xlarge); font-weight: var(--fw-bold); }
+
+    /* ─── Font utility classes ────────────────────────────────────────────── */
+    .font-serif-italic       { font-family: var(--font-heading) !important; font-style: italic !important; }
+    .font-serif-regular      { font-family: var(--font-heading) !important; font-style: normal; font-weight: var(--fw-normal); }
+    .font-serif-semibold     { font-family: var(--font-heading) !important; font-style: normal; font-weight: var(--fw-semibold); }
+    .font-serif-light-italic { font-family: var(--font-heading) !important; font-style: italic !important; font-weight: var(--fw-light); }
+    .font-sans               { font-family: var(--font-body) !important; }
+
+    /* ─── Ambient glow ────────────────────────────────────────────────────── */
+    .ambient-glow {
+      position: absolute;
+      background: var(--c-yellow);
+      filter: blur(60px);
+      opacity: 0.18;
+      border-radius: var(--radius-full);
+      bottom: -7.87%; left: 25%; right: 28.13%; top: 29.82%;
+      pointer-events: none;
+    }
+  /* ─── Marquee ticker ─────────────────────────────────────────────────── */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 48s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  /* ─── Calculator states & animations ────────────────────────────────── */
+  @keyframes calcFadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .calc-placeholder {
+    background: #1c1c1c;
+    border-radius: var(--radius-lg);
+  }
+
+  /* ─── Payment methods horizontal marquee ────────────────────────────── */
+  @keyframes payScrollLeft {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @keyframes payScrollRight {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+  .pay-row-left  { animation: payScrollLeft  34s linear infinite; }
+  .pay-row-right { animation: payScrollRight 28s linear infinite; }
+  .pay-row-left:hover, .pay-row-right:hover { animation-play-state: paused; }
+
+  /* ─── Component utilities ────────────────────────────────────────────── */
+  .dark-card {
+    background: var(--c-bg-dark);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .step-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0,0,0,0.07);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .icon-badge {
+    width: 2.75rem; height: 2.75rem;
+    border-radius: var(--radius-full);
+    background: var(--c-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-icon {
+    width: 2.75rem; height: 2.75rem;
+    border-radius: var(--radius-lg);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pay-tile {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 96px; height: 96px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .milestone-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--c-border-ui);
+    padding: 1.5rem;
+  }
