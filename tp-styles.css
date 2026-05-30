@@ -261,3 +261,27 @@
   }
 /* Prevent Webflow from collapsing flex/grid on any remaining semantic elements inside .tp-root */
 .tp-root header,.tp-root section,.tp-root footer,.tp-root nav,.tp-root main,.tp-root article{display:revert-layer}
+
+/* Arbitrary hex color utilities (Tailwind v4 scanner workaround) */
+.bg-\[\#111\]{background-color:#111}
+.bg-\[\#1a1c1c\]{background-color:#1a1c1c}
+.bg-\[\#1f2937\]{background-color:#1f2937}
+.bg-\[\#e6ff32\]{background-color:#e6ff32}
+.border-\[\#0a0a0a\]{border-color:#0a0a0a}
+.border-\[\#1a1c1c\]{border-color:#1a1c1c}
+.border-\[\#1f2937\]{border-color:#1f2937}
+.border-\[\#e5e7eb\]{border-color:#e5e7eb}
+.border-\[\#e6ff32\]{border-color:#e6ff32}
+.border-\[\#f3f4f6\]{border-color:#f3f4f6}
+.text-\[\#0a0a0a\]{color:#0a0a0a}
+.text-\[\#1a1c1c\]{color:#1a1c1c}
+.text-\[\#237c00\]{color:#237c00}
+.text-\[\#2a2929\]{color:#2a2929}
+.text-\[\#464833\]{color:#464833}
+.text-\[\#596400\]{color:#596400}
+.text-\[\#5f5e5e\]{color:#5f5e5e}
+.text-\[\#6b7280\]{color:#6b7280}
+.text-\[\#999\]{color:#999}
+.text-\[\#9ca3af\]{color:#9ca3af}
+.text-\[\#e6ff32\]{color:#e6ff32}
+.decoration-\[\#464833\]{text-decoration-color:#464833}
