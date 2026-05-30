@@ -259,3 +259,5 @@
     border: 1px solid var(--c-border-ui);
     padding: 1.5rem;
   }
+/* Prevent Webflow from collapsing flex/grid on any remaining semantic elements inside .tp-root */
+.tp-root header,.tp-root section,.tp-root footer,.tp-root nav,.tp-root main,.tp-root article{display:revert-layer}
