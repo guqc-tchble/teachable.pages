@@ -244,3 +244,44 @@
       if (!countryPicked || !revenuePicked) return;
       if (revealed) { runReset(); } else { runReveal(); }
     });
+
+// ── Sticky nav (cross-embed) ─────────────────────────────────────────────────
+(function () {
+  function initStickyNav() {
+    var nav     = document.getElementById('tp-nav-wrapper');
+    var marquee = document.getElementById('tp-marquee');
+    if (!nav || !marquee) return;
+
+    var spacer = document.createElement('div');
+    spacer.style.height  = nav.offsetHeight + 'px';
+    spacer.style.display = 'none';
+    nav.parentNode.insertBefore(spacer, nav);
+
+    function update() {
+      if (marquee.getBoundingClientRect().bottom <= 0) {
+        nav.style.position   = 'fixed';
+        nav.style.top        = '0';
+        nav.style.left       = '0';
+        nav.style.right      = '0';
+        nav.style.zIndex     = '50';
+        spacer.style.display = 'block';
+      } else {
+        nav.style.position   = '';
+        nav.style.top        = '';
+        nav.style.left       = '';
+        nav.style.right      = '';
+        nav.style.zIndex     = '';
+        spacer.style.display = 'none';
+      }
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStickyNav);
+  } else {
+    initStickyNav();
+  }
+})();
