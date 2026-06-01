@@ -288,7 +288,7 @@
 .text-\[\#9ca3af\]{color:#9ca3af}
 .text-\[\#e6ff32\]{color:#e6ff32}
 .decoration-\[\#464833\]{text-decoration-color:#464833}
-/* Arbitrary hex color utilities (Tailwind v4 scanner workaround) */
+/* Arbitrary hex color utilities */
 .bg-\[\#111\]{background-color:#111}
 .bg-\[\#1a1c1c\]{background-color:#1a1c1c}
 .bg-\[\#1f2937\]{background-color:#1f2937}
@@ -311,4 +311,4 @@
 .text-\[\#9ca3af\]{color:#9ca3af}
 .text-\[\#e6ff32\]{color:#e6ff32}
 .decoration-\[\#464833\]{text-decoration-color:#464833}
-.tp-root header,.tp-root section,.tp-root footer,.tp-root nav,.tp-root main,.tp-root article{display:revert-layer}
+.tp-root header,.tp-root section,.tp-root footer,.tp-root nav,.tp-root main{display:revert-layer}
