@@ -380,5 +380,6 @@ outline: none;
 :root {
   --font-sans: Peridotpenormvf, Arial, sans-serif;
   --font-serif: Ivyprestoheadline, Georgia, serif;
+  --font-body: Peridotpenormvf, Arial, sans-serif;
 }
 .tp-root { font-family: Peridotpenormvf, Arial, sans-serif; }
